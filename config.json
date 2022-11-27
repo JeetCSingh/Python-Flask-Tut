@@ -4,9 +4,11 @@
     "local_server": "True",
     "local_uri": "mysql+pymysql://root:@localhost/codingthunder",
     "prod_url" : "mysql+pymysql://root:@localhost/codingthunder",
-    "blog_name" : "Coding Thunder",
+    "blog_name" : "JEET CLASSES",
     "gmail-user": "jeet1991rajput@gmail.com",
-    "gmail-password": "vjmzvfmxobldfwxsemol"
+    "gmail-password": "kmukodsnwzuwadtl",
+    "about_text": "Hi, my name is Jeet singh. Welcome to Flask tutorial.",
+    "no_of_posts" : 5
 
 
   }

@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+        <!-- Page content-->
+        <div>
+            <div>
+                <div>
+                    <!-- Post content-->
+                    <article>
+                        <!-- Post header-->
+						<center>
+                        <header class="mb-4">
+                            <!-- Post title-->
+                            <h1 class="fw-bolder mb-1">Welcome to Admin Page!</h1>
+                            <!-- Post meta content-->
+                            <div class="text-muted fst-italic mb-2">Posted on Nov 10, 2022 by Jeet Classes</div>
+							<hr>
+                            <!-- Post categories-->
+                            
+                        </header>
+						
+                        <!-- Preview image figure-->
+                        <figure class="mb-4"><img class="img-fluid rounded" src="{{url_for('static', filename='img/dashboard.jfif')}}" alt="..." /></figure>
+						<hr>
+						<a href='/add'><button class="btn btn-primary">Add a new post</button></td></a>
+						<hr>
+						</center>
+						
+                        <!-- Post content-->
+						<!-- Todo post featch by the database.-->
+						
+							<table class="table table-dark">
+							  <thead>
+								<tr>
+								  <th scope="col">S No</th>
+								  <th scope="col">Title</th>
+								  <th scope="col">Date</th>
+								  <th scope="col">Delete</th>
+								</tr>
+							  </thead>
+							  {% for post in posts %}
+							  <tbody>
+								<tr>
+								  <td>{{post.sno}}</td>
+								  <td>{{post.title}}</td>
+								  <td>{{post.date}}</td>
+								  <td><a href="/delete/{{post.sno}}"><button class="btn btn-primary">DELETE</button></a></td>
+								</tr>
+								
+							  </tbody>
+							  {% endfor %}
+							</table>
+                       
+						
+                    </article>
+                    <!-- Comments section-->
+                    
+                </div>
+                
+                    
+                </div>
+            </div>
+        </div>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+        <!-- Page content-->
+        <div>
+            <div>
+                <div>
+                    <!-- Post content-->
+                    <article>
+                        <!-- Post header-->
+						<center>
+                        <header class="mb-4">
+                            <!-- Post title-->
+                            <h1 class="fw-bolder mb-1">Welcome to Admin Page!</h1>
+                            <!-- Post meta content-->
+                            <div class="text-muted fst-italic mb-2">Posted on Nov 10, 2022 by Jeet Classes</div>
+							<hr>
+                            <!-- Post categories-->
+                            
+                        </header>
+						
+                        <!-- Preview image figure-->
+                        <figure class="mb-4"><img class="img-fluid rounded" src="{{url_for('static', filename='img/add.jfif')}}" alt="..." /></figure>
+						<hr>
+						
+						<hr>
+						</center>
+						
+                        <!-- Post content-->
+						<!-- Todo post featch by the database.-->
+						<form action="/add" method="Post">
+							<div class="form-group">
+								<label for="formGroupExampleInput">Title</label>
+								<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Add a title" name="title">
+							</div>
+							 <div class="form-group">
+								<label for="formGroupExampleInput2">Tagline</label>
+								<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Add a tagline" name="tline">
+							 </div>
+							 <div class="form-group">
+								<label for="formGroupExampleInput2">Slug</label>
+								<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Add a slug" name="slug">
+							 </div>
+							 <div class="form-group">
+								<label for="formGroupExampleInput2">Content</label>
+								<input type="textarea" rows="3" class="form-control" id="formGroupExampleInput2" placeholder="Add content" name="content">
+							 </div>
+							 <div>
+								<center><button class="btn btn-primary" type="submit">Submit</button></center>
+							 </div>
+						</form>
+                       
+						
+                    </article>
+                    <!-- Comments section-->
+                    
+                </div>
+                
+                    
+                </div>
+            </div>
+        </div>
+{% endblock %}
